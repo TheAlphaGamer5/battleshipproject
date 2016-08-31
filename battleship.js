@@ -34,6 +34,8 @@ for (i = 0; i < cols; i++) {
 		square.className = "boardSquare";
 
 		// THIS IS WHERE YOU WILL ADD CODE FOR PART 1 TO ADD TEXT TO EACH SQUARE
+ 			square.textContent = i + 1;
+			square.textContent = j + letterConversion;
 
 		// set each grid square's coordinates: multiples of the current row or column number
 		var topPosition = j * squareSize;
@@ -61,6 +63,11 @@ var gameBoard = [
 
 function fireTorpedo() {
 
-	// Your game logic will go here!
+//	if ("textBox"== ) {
+
+//	}
+//	else {
+
+//	}
 
 }
