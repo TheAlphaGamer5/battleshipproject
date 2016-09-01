@@ -71,7 +71,7 @@ function fireTorpedo() {
 
 	}
 	else {
-		document.getElementById("gameboard").style.backgroundColor = "purple";
+		//document.getElementById("gameboard").style.backgroundColor = "purple";
 
 	}
 
