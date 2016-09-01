@@ -34,6 +34,8 @@ p, button, input {
 	border: 1px solid #ddd;
 	width:50px;
 	height:50px;
+  background-color: white;
+  font-family: 'Abril Fatface', cursive;
 }
 
 .boardSquare {
@@ -46,6 +48,7 @@ p, button, input {
   position:relative;
   margin:0 auto 2em auto;
   width:500px;
+    font-family:'Courier New', sans-serif;
 }
 
 
