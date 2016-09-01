@@ -67,11 +67,12 @@ var gameBoard = [
 
 function fireTorpedo() {
 
-//	if ("textBox"== ) {
+	if ("textBox"== "A6") {
 
-//	}
-//	else {
+	}
+	else {
+		document.getElementById("gameboard").style.backgroundColor = "purple";
 
-//	}
+	}
 
 }
