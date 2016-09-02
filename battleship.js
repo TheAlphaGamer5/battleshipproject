@@ -3,6 +3,8 @@ var rows = 10;
 var cols = 10;
 var squareSize = 50;
 
+var missCounter = 16;
+
 // gets the container element
 var gameBoardContainer = document.getElementById("gameboard");
 
@@ -65,14 +67,29 @@ var gameBoard = [
 				[1,0,0,0,0,0,0,0,0,0]
 				]
 
+
 function fireTorpedo() {
+	var userInput = $("#myInputBox").val();
+	var row = userInput.substring(0,1);
+	var column = userInput.substring(1,2);
+	var letterR = letterConversion[row];
+	var letterC = column - 1;
 
-	if ("textBox"== "A6") {
+	var combine = 's' + letterR + letterC;
 
+
+	if (gameboard[letterR][letterC] == 1) {
+		$('#' + combine).CSS("background-color" , "purple");
+		missCounter += 1;
+		console.log(missCounter);
 	}
 	else {
-		//document.getElementById("gameboard").style.backgroundColor = "purple";
-
+		$('#' + combine).CSS("background-color", "gray");
 	}
-
+	if (missCounter == 17) {
+		console.log("destroyed");
+		$("#your_winner").fadeIn();
+		$("#your_winner").CSS("display", "block");
+		$("#invisdiv").fadeOut();
+	}
 }
