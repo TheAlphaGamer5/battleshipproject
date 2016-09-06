@@ -78,7 +78,7 @@ function fireTorpedo() {
 	var combine = 's' + letterR + letterC;
 
 
-	if (gameboard[letterR][letterC] == 1) {
+	if (gameboard[letterR] [letterC] == 1) {
 		$('#' + combine).CSS("background-color" , "purple");
 		missCounter += 1;
 		console.log(missCounter);
@@ -86,10 +86,10 @@ function fireTorpedo() {
 	else {
 		$('#' + combine).CSS("background-color", "gray");
 	}
-	if (missCounter == 17) {
-		console.log("destroyed");
-		$("#your_winner").fadeIn();
-		$("#your_winner").CSS("display", "block");
-		$("#invisdiv").fadeOut();
-	}
+//	if (missCounter == 17) {
+	//	console.log("destroyed");
+//		$("#your_winner").fadeIn();
+	//	$("#your_winner").CSS("display", "block");
+	//	$("#invisdiv").fadeOut();
+//	}
 }
