@@ -3,7 +3,7 @@ var rows = 10;
 var cols = 10;
 var squareSize = 50;
 
-var missCounter = 16;
+var hitCounter = 10;
 
 // gets the container element
 var gameBoardContainer = document.getElementById("gameboard");
@@ -71,22 +71,23 @@ var gameBoard = [
 function fireTorpedo() {
 	var userInput = $("#myInputBox").val();
 	var row = userInput.substring(0,1);
-	var column = userInput.substring(1,2);
+	var column = userInput.substring(1,3);
 	var letterR = letterConversion[row];
 	var letterC = column - 1;
 
 	var combine = 's' + letterR + letterC;
 
 
-	if (gameboard[letterR] [letterC] == 1) {
-		$('#' + combine).CSS("background-color" , "purple");
-		missCounter += 1;
-		console.log(missCounter);
+	if(gameboard[letterR][letterC] == 1) {
+		$("#" + combine).css("background-color", "purple");
+		hitCounter++;
+		console.log(hitCounter);
 	}
 	else {
-		$('#' + combine).CSS("background-color", "gray");
+		$("#" + combine).css("background-color", "gray");
 	}
-//	if (missCounter == 17) {
+
+//	if (hitCounter == 17) {
 	//	console.log("destroyed");
 //		$("#your_winner").fadeIn();
 	//	$("#your_winner").CSS("display", "block");

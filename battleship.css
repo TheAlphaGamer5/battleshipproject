@@ -1,3 +1,10 @@
+@font-face {
+font-family: 'Devil Breeze Medium';
+font-style: normal;
+font-weight: normal;
+src: local('Devil Breeze Medium'), url('Devil Breeze Medium.woff') format('woff');
+}
+
 body {
     margin: 60px auto;
     width: 70%;
@@ -6,9 +13,10 @@ body {
 }
 
 h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 5em;
+    font-family: 'Devil Breeze Medium';
     color: black;
+    padding: 0em;
 }
 
 p, button, input {
