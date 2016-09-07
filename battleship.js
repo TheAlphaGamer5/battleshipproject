@@ -3,7 +3,7 @@ var rows = 10;
 var cols = 10;
 var squareSize = 50;
 
-var hitCounter = 10;
+var hitCounter = 16;
 
 // gets the container element
 var gameBoardContainer = document.getElementById("gameboard");
@@ -76,9 +76,9 @@ function fireTorpedo() {
 	var letterC = column - 1;
 
 	var combine = 's' + letterR + letterC;
-	console.log("userInput is " + userInput);
-console.log("letterR is " + letterR);
-console.log("letterC is " + letterC);
+	//console.log("userInput is " + userInput);
+//console.log("letterR is " + letterR);
+//console.log("letterC is " + letterC);
 
 	if(gameBoard[letterR][letterC] == 1) {
 		$("#" + combine).css("background-color", "purple");
@@ -89,10 +89,28 @@ console.log("letterC is " + letterC);
 		$("#" + combine).css("background-color", "gray");
 	}
 
-//	if (hitCounter == 17) {
-	//	console.log("destroyed");
-//		$("#your_winner").fadeIn();
-	//	$("#your_winner").CSS("display", "block");
-	//	$("#invisdiv").fadeOut();
-//	}
+	if (hitCounter == 17) {
+		console.log("destroyed");
+		$("#your_winner").fadeIn();
+		// Get the modal
+		var modal = document.getElementById('your_winner');
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks on the button, open the modal
+
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		    modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		}
+	}
 }
