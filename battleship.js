@@ -76,9 +76,11 @@ function fireTorpedo() {
 	var letterC = column - 1;
 
 	var combine = 's' + letterR + letterC;
+	console.log("userInput is " + userInput);
+console.log("letterR is " + letterR);
+console.log("letterC is " + letterC);
 
-
-	if(gameboard[letterR][letterC] == 1) {
+	if(gameBoard[letterR][letterC] == 1) {
 		$("#" + combine).css("background-color", "purple");
 		hitCounter++;
 		console.log(hitCounter);
