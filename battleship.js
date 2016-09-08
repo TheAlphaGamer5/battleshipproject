@@ -3,7 +3,9 @@ var rows = 10;
 var cols = 10;
 var squareSize = 50;
 
-var hitCounter = 16;
+var hitCounter = 1;
+var aFire=new Audio()
+aFire.src='Gunshot.mp3';
 
 // gets the container element
 var gameBoardContainer = document.getElementById("gameboard");
@@ -69,6 +71,7 @@ var gameBoard = [
 
 
 function fireTorpedo() {
+	aFire.play();
 	var userInput = $("#myInputBox").val();
 	var row = userInput.substring(0,1);
 	var column = userInput.substring(1,3);
@@ -112,5 +115,6 @@ function fireTorpedo() {
 		        modal.style.display = "none";
 		    }
 		}
+
 	}
 }
