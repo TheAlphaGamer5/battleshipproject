@@ -55,8 +55,6 @@ for (i = 0; i < cols; i++) {
 	}
 }
 
-
-
 // Hardcoded 2D array to indicate where the ships are placed
 var gameBoard = [
 				[0,0,0,1,1,1,1,0,0,0],
@@ -89,7 +87,6 @@ function fireTorpedo() {
 		$("#" + combine).css("background-color", "purple");
 		hitCounter++;
 		console.log(hitCounter);
-
 	}
 	else {
 		$("#" + combine).css("background-color", "gray");
