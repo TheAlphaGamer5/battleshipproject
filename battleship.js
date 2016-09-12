@@ -3,7 +3,7 @@ var rows = 10;
 var cols = 10;
 var squareSize = 50;
 
-var hitCounter = 16;
+var hitCounter = 1;
 var aFire=new Audio()
 aFire.src='Gunshot.mp3';
 
